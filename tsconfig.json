@@ -8,11 +8,14 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
+    "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
+    "strictNullChecks": false,
     "types": [
       "webpack-env",
+      "node",
       "jest"
     ],
     "paths": {
