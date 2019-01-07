@@ -2,4 +2,5 @@
   .child-title v-show デモ
   .button-area
     el-button(@click="displayFlag=!displayFlag") 切り替えボタン
-  img.logo-img(v-show="displayFlag" alt="" src="../../assets/logo.png")
+  transition(name="image-transition")
+    img.logo-img(v-show="displayFlag" alt="" src="../../assets/logo.png")
