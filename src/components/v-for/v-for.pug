@@ -1,4 +1,4 @@
 .v-for
   .child-title v-for デモ
   ul.list-items
-    li(v-for="item in listItems" :key="item") {{ item }}
+    li(v-for="item, index in listItems" :key="item") {{ index }}. {{ item }}
