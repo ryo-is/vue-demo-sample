@@ -1,0 +1,7 @@
+.click-event
+  .child-title ClickEvent デモ
+  el-row
+    el-col(:span="16")
+      el-button(@click="addCount") カウントアップ
+    el-col(:span="2")
+      .count-number {{ countNumber }}
