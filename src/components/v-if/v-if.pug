@@ -1,0 +1,5 @@
+.v-if
+  .child-title v-ifによる表示/非表示切り替え
+  .button-area
+    el-button(@click="changeDisplayFlag") 切り替えボタン
+  img.logo-img(v-if="displayFlag==='indicate'" alt="" src="../../assets/logo.png")

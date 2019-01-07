@@ -1,3 +1,7 @@
 .home
   .title {{ homeTitle }}
-  img(alt="Vue logo" src="../../assets/logo.png")
+  el-row
+    el-col(:span="12")
+      vShowComponent
+    el-col(:span="12")
+      vIfComponent

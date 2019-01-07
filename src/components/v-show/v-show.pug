@@ -1,0 +1,5 @@
+.v-show
+  .child-title v-showによる表示/非表示切り替え
+  .button-area
+    el-button(@click="displayFlag=!displayFlag") 切り替えボタン
+  img.logo-img(v-show="displayFlag" alt="" src="../../assets/logo.png")
