@@ -1,6 +1,6 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({})
-export default class vModelComponent extends Vue {
+export default class VModelComponent extends Vue {
   public inputText: string = "";
 }
