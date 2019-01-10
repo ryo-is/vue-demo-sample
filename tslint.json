@@ -27,6 +27,7 @@
     "max-line-length": false,
     "no-conditional-assignment": true,
     "no-console": false,
+    "trailing-comma": false,
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-empty-interface": true,

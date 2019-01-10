@@ -30,6 +30,16 @@ export default class Home extends Vue {
   public titleDisplay: boolean = true;
   public refDemoText: string = "";
   public refInputText: string = "propで渡す文字列";
+  public tableData: any = [
+    {
+      name: "suzuki",
+      value: 10
+    },
+    {
+      name: "sato",
+      value: 20
+    }
+  ];
 
   // public created() {
   //   const refDemoComponent: refComponent = this.$refs.refDemo as Vue;
