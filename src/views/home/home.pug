@@ -22,4 +22,11 @@
       changeClassComponent
   el-row
     el-col(:span="12")
-      propComponent(:prop-text="'Propで値を子Componentに渡す'", :prop-value="propValue")
+      propComponent(ref="propDemo", :prop-text="'Propで値を子Componentに渡す'", :prop-value="propValue")
+    el-col(:span="12")
+      refComponent(ref="refDemo", :ref-text="refInputText")
+      el-row
+        el-col(:span="10")
+          el-input(v-model="refInputText" @change="changeRefInputText")
+        el-col(:span="14")
+          .ref-demo-text {{ refDemoText }}

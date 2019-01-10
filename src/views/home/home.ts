@@ -8,6 +8,7 @@ import vModelComponent from "@/components/v-model/v-model.vue";
 import emitComponent from "@/components/emit/Emit.vue";
 import changeClassComponent from "@/components/changeClass/ChangeClass.vue";
 import propComponent from "@/components/prop/Prop.vue";
+import refComponent from "@/components/ref/Ref.vue";
 
 @Component({
   components: {
@@ -20,14 +21,32 @@ import propComponent from "@/components/prop/Prop.vue";
     emitComponent,
     changeClassComponent,
     propComponent,
+    refComponent,
   },
 })
 export default class Home extends Vue {
   public homeTitle: string = "Vue Demo Sapmle";
   public propValue: string = "インスタンス変数を子Componentに渡す";
   public titleDisplay: boolean = true;
+  public refDemoText: string = "";
+  public refInputText: string = "propで渡す文字列";
+
+  // public created() {
+  //   const refDemoComponent: refComponent = this.$refs.refDemo as Vue;
+  //   console.log(refDemoComponent); // undefined
+  // }
+
+  public mounted() {
+    const refDemoComponent: any = this.$refs.refDemo;
+    this.refDemoText = refDemoComponent.returnText();
+  }
 
   public changeTitleDisplay() {
     this.titleDisplay = !this.titleDisplay;
+  }
+
+  public changeRefInputText() {
+    const refDemoComponent: any = this.$refs.refDemo;
+    refDemoComponent.updateRefText(this.refInputText);
   }
 }
