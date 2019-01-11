@@ -9,6 +9,7 @@ import emitComponent from "@/components/emit/Emit.vue";
 import changeClassComponent from "@/components/changeClass/ChangeClass.vue";
 import propComponent from "@/components/prop/Prop.vue";
 import refComponent from "@/components/ref/Ref.vue";
+import chartComponent from "@/components/chart/Chart.vue";
 
 @Component({
   components: {
@@ -22,6 +23,7 @@ import refComponent from "@/components/ref/Ref.vue";
     changeClassComponent,
     propComponent,
     refComponent,
+    chartComponent
   },
 })
 export default class Home extends Vue {
