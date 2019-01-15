@@ -1,0 +1,7 @@
+.chart
+  .title {{ chartTitle }}
+  router-link.link-chart(to="/") VueDemo集はこちら
+  el-row
+    .chart-area
+      .chart-title vue-chartjsのデモ
+      lineChartComponent(:chart-data="chartData")

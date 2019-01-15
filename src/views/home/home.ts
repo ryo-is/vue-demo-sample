@@ -9,7 +9,6 @@ import emitComponent from "@/components/emit/Emit.vue";
 import changeClassComponent from "@/components/changeClass/ChangeClass.vue";
 import propComponent from "@/components/prop/Prop.vue";
 import refComponent from "@/components/ref/Ref.vue";
-import chartComponent from "@/components/chart/Chart.vue";
 
 @Component({
   components: {
@@ -22,12 +21,11 @@ import chartComponent from "@/components/chart/Chart.vue";
     emitComponent,
     changeClassComponent,
     propComponent,
-    refComponent,
-    chartComponent
+    refComponent
   },
 })
 export default class Home extends Vue {
-  public homeTitle: string = "Vue Demo Sapmle";
+  public homeTitle: string = "Vue Demo App";
   public propValue: string = "インスタンス変数を子Componentに渡す";
   public titleDisplay: boolean = true;
   public refDemoText: string = "";
@@ -42,11 +40,6 @@ export default class Home extends Vue {
       value: 20
     }
   ];
-  public chartData: any = {};
-
-  public created() {
-    this.createChartValue();
-  }
 
   public mounted() {
     const refDemoComponent: any = this.$refs.refDemo;
@@ -60,35 +53,5 @@ export default class Home extends Vue {
   public changeRefInputText() {
     const refDemoComponent: any = this.$refs.refDemo;
     refDemoComponent.updateRefText(this.refInputText);
-  }
-
-  public createChartValue() {
-    this.chartData = {
-      labels: ["1", "2", "3", "4", "5"],
-      datasets: [
-        {
-          label: "Tokyo",
-          backgroundColor: "#F87979",
-          borderColor: "#F87979",
-          fill: false,
-          data: this.craeteRamdomValue()
-        },
-        {
-          label: "Osaka",
-          backgroundColor: "#6090EF",
-          borderColor: "#6090EF",
-          fill: false,
-          data: this.craeteRamdomValue()
-        }
-      ]
-    };
-  }
-
-  public craeteRamdomValue() {
-    const arr: number[] = [];
-    for (let i = 0; i < 5; i++) {
-      arr.push(Math.random() * 100);
-    }
-    return arr;
   }
 }

@@ -1,25 +1,13 @@
 import { Component, Mixins, Prop, Watch } from "vue-property-decorator";
 import { Line, mixins } from "vue-chartjs";
-// const { reactiveProp } = mixins;
 
 @Component({})
-export default class ChartComponent extends Mixins(Line, mixins.reactiveProp) {
+export default class LineChartComponent extends Mixins(Line, mixins.reactiveProp) {
   @Prop() public chartData: any;
 
   @Watch("chartData") public onChangeChartValue() {
     console.log(this);
   }
-
-  // public datacollection: any = {
-  //   labels: ["January", "February"],
-  //   datasets: [
-  //     {
-  //       label: "Data One",
-  //       backgroundColor: "#f87979",
-  //       data: this.chartData
-  //     }
-  //   ]
-  // };
 
   public options: any = {
     responsive: true,

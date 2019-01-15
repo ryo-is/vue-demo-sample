@@ -1,5 +1,6 @@
 .home
   .title(v-show="titleDisplay") {{ homeTitle }}
+  router-link.link-chart(to="/chart") VueChartDemoはこちら
   el-row
     el-col(:span="12")
       clickEventComponent
@@ -17,7 +18,7 @@
       vModelComponent
   el-row
     el-col(:span="12")
-      emitComponent(@changeTitleDisplay="changeTitleDisplay", @createChartValue="createChartValue")
+      emitComponent(@changeTitleDisplay="changeTitleDisplay")
     el-col(:span="12")
       changeClassComponent
   el-row
@@ -30,7 +31,3 @@
           el-input(v-model="refInputText" @change="changeRefInputText")
         el-col(:span="14")
           .ref-demo-text {{ refDemoText }}
-  el-row
-    .chart-area
-      .chart-title vue-chartjsのデモ
-      chartComponent(:chart-data="chartData")
