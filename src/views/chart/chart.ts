@@ -64,7 +64,8 @@ export default class Chart extends Vue {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
-            min: 0
+            min: 0,
+            max: 100
           },
         },
         {
@@ -81,7 +82,8 @@ export default class Chart extends Vue {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
-            min: 0
+            min: 0,
+            max: 300
           },
           position: "right"
         }
