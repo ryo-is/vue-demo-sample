@@ -35,7 +35,10 @@ export default class Chart extends Vue {
       xAxes: [
         {
           gridLines: {
-            display: false,
+            display: true,
+            drawOnChartArea: false,
+            color: "rgba(255, 255, 255, .5)",
+            zeroLineColor: "rgba(255, 255, 255, 1)"
           },
           ticks: {
             autoSkip: true,
@@ -55,18 +58,21 @@ export default class Chart extends Vue {
           type: "linear",
           gridLines: {
             display: true,
+            drawOnChartArea: false,
             color: "rgba(255, 255, 255, .5)",
             zeroLineColor: "rgba(255, 255, 255, 1)"
           },
           scaleLabel: {
-            display: false,
+            display: true,
+            fontColor: "rgba(255, 255, 255, 1)",
+            labelString: "温度(℃)"
           },
           ticks: {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
             min: 0,
-            max: 100
+            max: 40
           },
         },
         {
@@ -79,14 +85,16 @@ export default class Chart extends Vue {
             zeroLineColor: "rgba(255, 255, 255, 1)"
           },
           scaleLabel: {
-            display: false,
+            display: true,
+            fontColor: "rgba(255, 255, 255, 1)",
+            labelString: "湿度(%)"
           },
           ticks: {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
             min: 0,
-            max: 300
+            max: 100
           },
           position: "right"
         }
@@ -115,19 +123,19 @@ export default class Chart extends Vue {
         {
           yAxisID: "yAxis_1",
           type: "line",
-          label: "Tokyo",
+          label: "温度",
           backgroundColor: "#F87979",
           borderColor: "#F87979",
           fill: false,
-          data: this.craeteRamdomValue(100)
+          data: this.craeteRamdomValue(40)
         },
         {
           yAxisID: "yAxis_2",
-          label: "Osaka",
+          label: "湿度",
           backgroundColor: "#6090EF",
           borderColor: "#6090EF",
           fill: false,
-          data: this.craeteRamdomValue(300)
+          data: this.craeteRamdomValue(100)
         }
       ]
     };
