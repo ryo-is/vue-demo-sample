@@ -17,7 +17,7 @@
       vModelComponent
   el-row
     el-col(:span="12")
-      emitComponent(v-on:changeTitleDisplay="changeTitleDisplay")
+      emitComponent(@changeTitleDisplay="changeTitleDisplay", @createChartValue="createChartValue")
     el-col(:span="12")
       changeClassComponent
   el-row
@@ -31,4 +31,6 @@
         el-col(:span="14")
           .ref-demo-text {{ refDemoText }}
   el-row
-    chartComponent
+    .chart-area
+      .chart-title vue-chartjsのデモ
+      chartComponent(:chart-data="chartData")

@@ -42,11 +42,11 @@ export default class Home extends Vue {
       value: 20
     }
   ];
+  public chartData: any = {};
 
-  // public created() {
-  //   const refDemoComponent: refComponent = this.$refs.refDemo as Vue;
-  //   console.log(refDemoComponent); // undefined
-  // }
+  public created() {
+    this.createChartValue();
+  }
 
   public mounted() {
     const refDemoComponent: any = this.$refs.refDemo;
@@ -60,5 +60,35 @@ export default class Home extends Vue {
   public changeRefInputText() {
     const refDemoComponent: any = this.$refs.refDemo;
     refDemoComponent.updateRefText(this.refInputText);
+  }
+
+  public createChartValue() {
+    this.chartData = {
+      labels: ["1", "2", "3", "4", "5"],
+      datasets: [
+        {
+          label: "Tokyo",
+          backgroundColor: "#F87979",
+          borderColor: "#F87979",
+          fill: false,
+          data: this.craeteRamdomValue()
+        },
+        {
+          label: "Osaka",
+          backgroundColor: "#6090EF",
+          borderColor: "#6090EF",
+          fill: false,
+          data: this.craeteRamdomValue()
+        }
+      ]
+    };
+  }
+
+  public craeteRamdomValue() {
+    const arr: number[] = [];
+    for (let i = 0; i < 5; i++) {
+      arr.push(Math.random() * 100);
+    }
+    return arr;
   }
 }

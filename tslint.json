@@ -25,6 +25,7 @@
     "forin": false,
     "prefer-for-of": false,
     "max-line-length": false,
+    "member-ordering": false,
     "no-conditional-assignment": true,
     "no-console": false,
     "trailing-comma": false,
