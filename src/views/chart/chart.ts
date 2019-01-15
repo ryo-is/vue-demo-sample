@@ -114,6 +114,7 @@ export default class Chart extends Vue {
       datasets: [
         {
           yAxisID: "yAxis_1",
+          type: "line",
           label: "Tokyo",
           backgroundColor: "#F87979",
           borderColor: "#F87979",
