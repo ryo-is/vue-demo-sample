@@ -52,6 +52,7 @@ export default class Chart extends Vue {
       yAxes: [
         {
           id: "yAxis_1",
+          type: "linear",
           gridLines: {
             display: true,
             color: "rgba(255, 255, 255, .5)",
@@ -70,8 +71,10 @@ export default class Chart extends Vue {
         },
         {
           id: "yAxis_2",
+          type: "linear",
           gridLines: {
             display: true,
+            drawOnChartArea: false,
             color: "rgba(255, 255, 255, .5)",
             zeroLineColor: "rgba(255, 255, 255, 1)"
           },
