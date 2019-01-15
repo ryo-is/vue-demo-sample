@@ -65,14 +65,14 @@ export default class Chart extends Vue {
           scaleLabel: {
             display: true,
             fontColor: "rgba(255, 255, 255, 1)",
-            labelString: "温度(℃)"
+            labelString: "湿度(%)"
           },
           ticks: {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
             min: 0,
-            max: 40
+            max: 100
           },
         },
         {
@@ -87,14 +87,14 @@ export default class Chart extends Vue {
           scaleLabel: {
             display: true,
             fontColor: "rgba(255, 255, 255, 1)",
-            labelString: "湿度(%)"
+            labelString: "温度(℃)"
           },
           ticks: {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
             min: 0,
-            max: 100
+            max: 40
           },
           position: "right"
         }
@@ -123,19 +123,20 @@ export default class Chart extends Vue {
         {
           yAxisID: "yAxis_1",
           type: "line",
-          label: "温度",
-          backgroundColor: "#F87979",
-          borderColor: "#F87979",
-          fill: false,
-          data: this.craeteRamdomValue(40)
-        },
-        {
-          yAxisID: "yAxis_2",
           label: "湿度",
           backgroundColor: "#6090EF",
           borderColor: "#6090EF",
           fill: false,
           data: this.craeteRamdomValue(100)
+        },
+        {
+          yAxisID: "yAxis_2",
+          type: "bar",
+          label: "温度",
+          backgroundColor: "#F87979",
+          borderColor: "#F87979",
+          fill: false,
+          data: this.craeteRamdomValue(40)
         }
       ]
     };
