@@ -3,5 +3,5 @@
   router-link.link-chart(to="/") VueDemo集はこちら
   el-row
     .chart-area
-      el-button.change-value-button(type="primary" @click="createChartValue()") データ変更
+      el-button.change-value-button(type="primary" @click="createChartData()") データ変更
       lineChartComponent(:chart-data="chartData", :chart-options="chartOptions")

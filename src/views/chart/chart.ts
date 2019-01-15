@@ -51,6 +51,7 @@ export default class Chart extends Vue {
       ],
       yAxes: [
         {
+          id: "yAxis_1",
           gridLines: {
             display: true,
             color: "rgba(255, 255, 255, .5)",
@@ -63,44 +64,73 @@ export default class Chart extends Vue {
             autoSkip: true,
             fontColor: "rgba(255, 255, 255, 1)",
             fontSize: 14,
-            max: 100,
             min: 0
           },
         },
+        {
+          id: "yAxis_2",
+          gridLines: {
+            display: true,
+            color: "rgba(255, 255, 255, .5)",
+            zeroLineColor: "rgba(255, 255, 255, 1)"
+          },
+          scaleLabel: {
+            display: false,
+          },
+          ticks: {
+            autoSkip: true,
+            fontColor: "rgba(255, 255, 255, 1)",
+            fontSize: 14,
+            min: 0
+          },
+          position: "right"
+        }
       ],
     }
   };
 
   public created() {
-    this.createChartValue();
+    this.createChartData();
   }
 
-  public createChartValue() {
+  // public createOptions() {
+  //   const params: any[] = [];
+  //   for (let i = 1; i < 3; i++) {
+  //     const pushParams = this.baseYAxisParams;
+  //     pushParams["id"] = "yAxis_" + String(i);
+  //   }
+  //   console.log(params);
+  //   return params;
+  // }
+
+  public createChartData() {
     this.chartData = {
       labels: ["1", "2", "3", "4", "5"],
       datasets: [
         {
+          yAxisID: "yAxis_1",
           label: "Tokyo",
           backgroundColor: "#F87979",
           borderColor: "#F87979",
           fill: false,
-          data: this.craeteRamdomValue()
+          data: this.craeteRamdomValue(100)
         },
         {
+          yAxisID: "yAxis_2",
           label: "Osaka",
           backgroundColor: "#6090EF",
           borderColor: "#6090EF",
           fill: false,
-          data: this.craeteRamdomValue()
+          data: this.craeteRamdomValue(300)
         }
       ]
     };
   }
 
-  public craeteRamdomValue() {
+  public craeteRamdomValue(baseNumber: number) {
     const arr: number[] = [];
     for (let i = 0; i < 5; i++) {
-      arr.push(Math.random() * 100);
+      arr.push(Math.random() * baseNumber);
     }
     return arr;
   }
