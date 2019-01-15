@@ -4,4 +4,4 @@
   el-row
     .chart-area
       el-button.change-value-button(type="primary" @click="createChartValue()") データ変更
-      lineChartComponent(:chart-data="chartData")
+      lineChartComponent(:chart-data="chartData", :chart-options="chartOptions")

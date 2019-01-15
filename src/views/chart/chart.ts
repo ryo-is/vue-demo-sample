@@ -9,6 +9,67 @@ import lineChartComponent from "@/components/chart/line/LineChart.vue";
 export default class Chart extends Vue {
   public chartTitle: string = "Vue Chartjs Demo";
   public chartData: any = {};
+  public chartOptions: any = {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+      // display: false
+      onClick(event, legendItem) {
+        return;
+      },
+      fullWidth: false,
+      labels: {
+        boxWidth: 15,
+        fontColor: "#ffffff"
+      },
+    },
+    layout: {
+      padding: {
+        top: 20,
+        left: 20,
+        bottom: 20,
+        right: 20
+      }
+    },
+    scales: {
+      xAxes: [
+        {
+          gridLines: {
+            display: false,
+          },
+          ticks: {
+            autoSkip: true,
+            fontColor: "rgba(255, 255, 255, 1)",
+            fontSize: 14
+          },
+          scaleLabel: {
+            display: true,
+            fontColor: "rgba(255, 255, 255, 1)",
+            labelString: "月",
+          },
+        },
+      ],
+      yAxes: [
+        {
+          gridLines: {
+            display: true,
+            color: "rgba(255, 255, 255, .5)",
+            zeroLineColor: "rgba(255, 255, 255, 1)"
+          },
+          scaleLabel: {
+            display: false,
+          },
+          ticks: {
+            autoSkip: true,
+            fontColor: "rgba(255, 255, 255, 1)",
+            fontSize: 14,
+            max: 100,
+            min: 0
+          },
+        },
+      ],
+    }
+  };
 
   public created() {
     this.createChartValue();

@@ -33,6 +33,7 @@
     "no-empty": true,
     "no-empty-interface": true,
     "no-eval": true,
+    "no-string-literal": false,
     "no-internal-module": true,
     "no-trailing-whitespace": true,
     "no-unsafe-finally": true,
