@@ -132,7 +132,7 @@ export default class Chart extends Vue {
   public craeteRamdomValue(baseNumber: number) {
     const arr: number[] = [];
     for (let i = 0; i < 5; i++) {
-      arr.push(Math.random() * baseNumber);
+      arr.push(Math.floor(Math.random() * baseNumber));
     }
     return arr;
   }
