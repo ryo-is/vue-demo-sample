@@ -1,6 +1,14 @@
 import { Component, Vue } from "vue-property-decorator";
 import lineChartComponent from "@/components/chart/line/LineChart.vue";
 
+const FONT_COLOR = "rgba(255, 255, 255, 1)";
+const GRID_LINES_SETTING = {
+  display: true,
+  drawOnChartArea: false,
+  color: "rgba(255, 255, 255, .5)",
+  zeroLineColor: "rgba(255, 255, 255, 1)"
+};
+
 @Component({
   components: {
     lineChartComponent
@@ -20,7 +28,7 @@ export default class Chart extends Vue {
       fullWidth: false,
       labels: {
         boxWidth: 15,
-        fontColor: "#ffffff"
+        fontColor: FONT_COLOR
       },
     },
     layout: {
@@ -34,20 +42,15 @@ export default class Chart extends Vue {
     scales: {
       xAxes: [
         {
-          gridLines: {
-            display: true,
-            drawOnChartArea: false,
-            color: "rgba(255, 255, 255, .5)",
-            zeroLineColor: "rgba(255, 255, 255, 1)"
-          },
+          gridLines: GRID_LINES_SETTING,
           ticks: {
             autoSkip: true,
-            fontColor: "rgba(255, 255, 255, 1)",
+            fontColor: FONT_COLOR,
             fontSize: 14
           },
           scaleLabel: {
             display: true,
-            fontColor: "rgba(255, 255, 255, 1)",
+            fontColor: FONT_COLOR,
             labelString: "月",
           },
         },
@@ -56,20 +59,15 @@ export default class Chart extends Vue {
         {
           id: "yAxis_1",
           type: "linear",
-          gridLines: {
-            display: true,
-            drawOnChartArea: false,
-            color: "rgba(255, 255, 255, .5)",
-            zeroLineColor: "rgba(255, 255, 255, 1)"
-          },
+          gridLines: GRID_LINES_SETTING,
           scaleLabel: {
             display: true,
-            fontColor: "rgba(255, 255, 255, 1)",
+            fontColor: FONT_COLOR,
             labelString: "湿度(%)"
           },
           ticks: {
             autoSkip: true,
-            fontColor: "rgba(255, 255, 255, 1)",
+            fontColor: FONT_COLOR,
             fontSize: 14,
             min: 0,
             max: 100
@@ -78,20 +76,15 @@ export default class Chart extends Vue {
         {
           id: "yAxis_2",
           type: "linear",
-          gridLines: {
-            display: true,
-            drawOnChartArea: false,
-            color: "rgba(255, 255, 255, .5)",
-            zeroLineColor: "rgba(255, 255, 255, 1)"
-          },
+          gridLines: GRID_LINES_SETTING,
           scaleLabel: {
             display: true,
-            fontColor: "rgba(255, 255, 255, 1)",
+            fontColor: FONT_COLOR,
             labelString: "温度(℃)"
           },
           ticks: {
             autoSkip: true,
-            fontColor: "rgba(255, 255, 255, 1)",
+            fontColor: FONT_COLOR,
             fontSize: 14,
             min: 0,
             max: 40
