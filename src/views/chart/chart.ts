@@ -27,7 +27,7 @@ export default class Chart extends Vue {
       },
       fullWidth: false,
       labels: {
-        boxWidth: 15,
+        boxWidth: 20,
         fontColor: FONT_COLOR
       },
     },
@@ -98,16 +98,6 @@ export default class Chart extends Vue {
   public created() {
     this.createChartData();
   }
-
-  // public createOptions() {
-  //   const params: any[] = [];
-  //   for (let i = 1; i < 3; i++) {
-  //     const pushParams = this.baseYAxisParams;
-  //     pushParams["id"] = "yAxis_" + String(i);
-  //   }
-  //   console.log(params);
-  //   return params;
-  // }
 
   public createChartData() {
     this.chartData = {
