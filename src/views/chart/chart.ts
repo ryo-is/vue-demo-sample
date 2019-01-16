@@ -1,5 +1,5 @@
 import { Component, Vue } from "vue-property-decorator";
-import lineChartComponent from "@/components/chart/line/LineChart.vue";
+import lineChartComponent from "@/components/chart/VueChart.vue";
 import Chart from "chart.js";
 
 const FONT_COLOR = "rgba(255, 255, 255, 1)";
