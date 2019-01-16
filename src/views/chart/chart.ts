@@ -1,5 +1,6 @@
 import { Component, Vue } from "vue-property-decorator";
 import lineChartComponent from "@/components/chart/line/LineChart.vue";
+import Chart from "chart.js";
 
 const FONT_COLOR = "rgba(255, 255, 255, 1)";
 const GRID_LINES_SETTING = {
@@ -14,10 +15,10 @@ const GRID_LINES_SETTING = {
     lineChartComponent
   }
 })
-export default class Chart extends Vue {
+export default class ChartComponent extends Vue {
   public chartTitle: string = "Vue Chartjs Demo";
-  public chartData: any = {};
-  public chartOptions: any = {
+  public chartData: Chart.ChartData = {};
+  public chartOptions: Chart.ChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     legend: {

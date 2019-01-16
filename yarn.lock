@@ -712,6 +712,11 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/chart.js@^2.7.42":
+  version "2.7.42"
+  resolved "https://registry.yarnpkg.com/@types/chart.js/-/chart.js-2.7.42.tgz#3a201969379ef96f99c2901705fa7b57330ba127"
+  integrity sha512-+0v+PV2J9wsV7u36Vqt5Oke7ugtiZqNeYJgNk5mgNMkEkqtjxo2Q9N5Q9znHlgmXeOTfQL6e1sfcAbTnPHAzlA==
+
 "@types/jest@^23.1.4":
   version "23.3.11"
   resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.11.tgz#d3a936ae753d9e484965f5cbd19027c2b8af2551"
