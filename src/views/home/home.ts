@@ -42,6 +42,7 @@ export default class Home extends Vue {
   ];
 
   public mounted() {
+    console.log(process.env);
     const refDemoComponent: any = this.$refs.refDemo;
     this.refDemoText = refDemoComponent.returnText();
   }
