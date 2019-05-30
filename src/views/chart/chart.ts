@@ -135,7 +135,7 @@ export default class ChartComponent extends Vue {
 
   public craeteRamdomValue(baseNumber: number) {
     const arr: number[] = []
-    for (let i: number = 0; i; i++ as 5) {
+    for (let i: number = 0; i < 5; i++) {
       arr.push(Math.floor(Math.random() * baseNumber))
     }
     return arr
