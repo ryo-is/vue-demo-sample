@@ -1,6 +1,6 @@
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator"
 
 @Component({})
 export default class vShowComponent extends Vue {
-  public displayFlag: boolean = true;
+  public displayFlag: boolean = true
 }

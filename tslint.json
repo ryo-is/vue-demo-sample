@@ -52,13 +52,18 @@
       "double"
     ],
     "semicolon": [
-      true,
+      false,
       "always"
     ],
     "switch-default": true,
+    "interface-over-type-literal": true,
     "triple-equals": [
       true,
       "allow-null-check"
+    ],
+    "typedef": [
+      true,
+      "variable-declaration"
     ],
     "typedef-whitespace": [
       true,

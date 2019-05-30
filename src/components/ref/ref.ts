@@ -1,16 +1,16 @@
-import { Component, Vue, Prop } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator"
 
 @Component({})
 export default class RefComponent extends Vue {
-  @Prop() public refText: string;
+  @Prop() public refText: string
 
-  public sampleText: string = "Refのデモです";
+  public sampleText: string = "Refのデモです"
 
   public returnText(): string {
-    return this.sampleText;
+    return this.sampleText
   }
 
   public updateRefText(newText: string) {
-    this.refText = newText;
+    this.refText = newText
   }
 }

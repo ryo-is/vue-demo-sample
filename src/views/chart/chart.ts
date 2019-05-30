@@ -1,14 +1,21 @@
-import { Component, Vue } from "vue-property-decorator";
-import lineChartComponent from "@/components/chart/VueChart.vue";
-import Chart from "chart.js";
+import { Component, Vue } from "vue-property-decorator"
+import lineChartComponent from "@/components/chart/VueChart.vue"
+import Chart from "chart.js"
 
-const FONT_COLOR = "rgba(255, 255, 255, 1)";
-const GRID_LINES_SETTING = {
+interface GridLinesSettingType {
+  display: boolean,
+  drawOnChartArea: boolean,
+  color: string,
+  zeroLineColor: string
+}
+
+const FONT_COLOR: string = "rgba(255, 255, 255, 1)"
+const GRID_LINES_SETTING: GridLinesSettingType = {
   display: true,
   drawOnChartArea: false,
   color: "rgba(255, 255, 255, .5)",
   zeroLineColor: "rgba(255, 255, 255, 1)"
-};
+}
 
 @Component({
   components: {
@@ -16,15 +23,15 @@ const GRID_LINES_SETTING = {
   }
 })
 export default class ChartComponent extends Vue {
-  public chartTitle: string = "Vue Chartjs Demo";
-  public chartData: Chart.ChartData = {};
+  public chartTitle: string = "Vue Chartjs Demo"
+  public chartData: Chart.ChartData = {}
   public chartOptions: Chart.ChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     legend: {
       // display: false
       onClick(event, legendItem) {
-        return;
+        return
       },
       fullWidth: false,
       labels: {
@@ -94,10 +101,10 @@ export default class ChartComponent extends Vue {
         }
       ],
     }
-  };
+  }
 
   public created() {
-    this.createChartData();
+    this.createChartData()
   }
 
   public createChartData() {
@@ -123,14 +130,14 @@ export default class ChartComponent extends Vue {
           data: this.craeteRamdomValue(40)
         }
       ]
-    };
+    }
   }
 
   public craeteRamdomValue(baseNumber: number) {
-    const arr: number[] = [];
-    for (let i = 0; i < 5; i++) {
-      arr.push(Math.floor(Math.random() * baseNumber));
+    const arr: number[] = []
+    for (let i: number = 0; i; i++ as 5) {
+      arr.push(Math.floor(Math.random() * baseNumber))
     }
-    return arr;
+    return arr
   }
 }

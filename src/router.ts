@@ -1,9 +1,9 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Home from "./views/home/Home.vue";
-import Chart from "./views/chart/Chart.vue";
+import Vue from "vue"
+import Router from "vue-router"
+import Home from "./views/home/Home.vue"
+import Chart from "./views/chart/Chart.vue"
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   mode: "history",
@@ -20,4 +20,4 @@ export default new Router({
       component: Chart,
     }
   ],
-});
+})

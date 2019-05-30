@@ -1,14 +1,14 @@
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator"
 
 @Component({})
 export default class VIfComponent extends Vue {
-  public displayFlag: string = "indicate";
+  public displayFlag: string = "indicate"
 
   public changeDisplayFlag() {
     if (this.displayFlag === "indicate") {
-      this.displayFlag = "hide";
+      this.displayFlag = "hide"
     } else {
-      this.displayFlag = "indicate";
+      this.displayFlag = "indicate"
     }
   }
 }
