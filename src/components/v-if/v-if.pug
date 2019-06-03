@@ -1,5 +1,5 @@
 .v-if
   .child-title v-if デモ
   .button-area
-    el-button(@click="changeDisplayFlag") 切り替えボタン
+    el-button(@click="changeDisplayFlag()") 切り替えボタン
   img.logo-img(v-if="displayFlag==='indicate'" alt="" src="../../assets/logo.png")

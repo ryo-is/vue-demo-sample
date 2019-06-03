@@ -2,7 +2,7 @@
   .child-title ChangeEvent デモ
   el-row
     el-col(:span="16")
-      el-select(v-model="selectItem" @change="changeItem")
+      el-select(v-model="selectItem" @change="changeItem()")
         el-option(label="Apple" value="Apple") Apple
         el-option(label="Banana" value="Banana") Banana
         el-option(label="Orange" value="Orange") Orange
