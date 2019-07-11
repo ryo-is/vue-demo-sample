@@ -56,7 +56,7 @@
       "always"
     ],
     "switch-default": true,
-    "interface-over-type-literal": true,
+    "interface-over-type-literal": false,
     "triple-equals": [
       true,
       "allow-null-check"
