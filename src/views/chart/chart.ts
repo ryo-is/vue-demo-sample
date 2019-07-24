@@ -10,6 +10,7 @@ interface GridLinesSettingType {
 }
 
 const FONT_COLOR: string = "rgba(255, 255, 255, 1)"
+const STACKED_SETTING: boolean = false
 const GRID_LINES_SETTING: GridLinesSettingType = {
   display: true,
   drawOnChartArea: false,
@@ -61,6 +62,7 @@ export default class ChartComponent extends Vue {
             fontColor: FONT_COLOR,
             labelString: "月",
           },
+          stacked: STACKED_SETTING
         },
       ],
       yAxes: [
@@ -80,10 +82,12 @@ export default class ChartComponent extends Vue {
             min: 0,
             max: 100
           },
+          stacked: STACKED_SETTING
         },
         {
           id: "yAxis_2",
           type: "linear",
+          display: !STACKED_SETTING,
           gridLines: GRID_LINES_SETTING,
           scaleLabel: {
             display: true,
@@ -97,7 +101,8 @@ export default class ChartComponent extends Vue {
             min: 0,
             max: 40
           },
-          position: "right"
+          position: "right",
+          stacked: STACKED_SETTING
         }
       ],
     }
@@ -113,7 +118,7 @@ export default class ChartComponent extends Vue {
       datasets: [
         {
           yAxisID: "yAxis_1",
-          type: "line",
+          type: "bar",
           label: "湿度",
           backgroundColor: "#6090EF",
           borderColor: "#6090EF",
